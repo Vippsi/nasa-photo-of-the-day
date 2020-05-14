@@ -41,15 +41,6 @@ flex-direction: column;
 align-items: center;
 
 `
-
-
-
-
-
-
-
-
-
 export default function Description({explanation, title, copyright}){
     // const {explanation} = props
     return (

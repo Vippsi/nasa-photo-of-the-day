@@ -11,7 +11,6 @@ import img from './imgs/hero2.jpg'
 import "./App.css";
 
 
-
 const StyledApp = styled.div`
 background-image: url(${img});
 
@@ -21,14 +20,10 @@ background-image: url(${img});
 }
 `
 
-
-
-
 function App() {
 
   const [data, setData] = useState({})
   const {date, explanation, url, title, copyright} = data
-
 
   const [selectDate, setSelectDate] = useState(new Date())
   const formattedDate = `${selectDate.getFullYear()}-${selectDate.getMonth()+ 1}-${selectDate.getDate()}` 
@@ -52,14 +47,10 @@ function App() {
 
   return (
     <StyledApp className="App">
-     
       <h1 className='title'>NASA's A Picture a Day!</h1>
       <Header date = {date} selectDate = {selectDate} setSelectDate={setSelectDate} dateSetter={dateSetter} formattedDate={formattedDate} title = {title}/>
-      
       <Description explanation = {explanation} title = {title} copyright={copyright}/>
-      <Image image = {url}/>
-      
-
+      <Image image = {url} title = {title}/>
     </StyledApp>
   );
 }

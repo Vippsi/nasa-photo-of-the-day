@@ -21,6 +21,7 @@ padding: 4%;
     font-size: .9rem;
     padding: 8%;
     margin-bottom: 5%;
+    
 };
 
 h1 {
@@ -47,6 +48,12 @@ h3 {
     margin-top: 1%;
 }
 
+.details {
+    @media (max-width: 500px) {
+        line-height: 1.4rem;
+    }
+}
+
 `
 const StyledDescriptionContainer = styled.div`
 display: flex;
@@ -62,7 +69,7 @@ export default function Description({explanation, title, copyright}){
             <h1>{title}</h1>
             <p className='whom'>by:</p>
             <h3>{copyright}</h3>
-            <p>{explanation}</p>
+            <p className = 'details'>{explanation}</p>
         </StyledDescription>
         </StyledDescriptionContainer>
     ) 

@@ -30,7 +30,6 @@ img{
     align-self: center;
     padding: 2%;  
 
-
     @media(max-width: 500px) {
         width: 100%;
         height: 100%;

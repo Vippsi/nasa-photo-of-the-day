@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      
+      <h1>NASA's A Picture a Day!</h1>
       <Header date = {date} selectDate = {selectDate} setSelectDate={setSelectDate} dateSetter={dateSetter} formattedDate={formattedDate} title = {title}/>
 
       <Description explanation = {explanation}/>

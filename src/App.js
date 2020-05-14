@@ -1,18 +1,28 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
 import {BASE_URL, API_KEY} from './constants'
 import Description from './components/Description'
-import Header from './components/Header'
+import Header, {formattedDate, selectDate} from './components/Header'
 import Image from './components/Image'
 import "./App.css";
 
 function App() {
 
   const [data, setData] = useState({})
-  const {date, explanation, url} = data
+  const {date, explanation, url, title} = data
+
+
+  const [selectDate, setSelectDate] = useState(new Date())
+  const formattedDate = `${selectDate.getFullYear()}-${selectDate.getMonth()+ 1}-${selectDate.getDate()}` 
+
+  const dateSetter = (selectDate) => {
+    setSelectDate(selectDate)
+   }
 
   useEffect(()=> {
-    axios.get(`${BASE_URL}?api_key=${API_KEY}`)
+    axios.get(`${BASE_URL}?api_key=${API_KEY}&date=${formattedDate}`)
     .then(res => {
       setData(res.data)
     })
@@ -20,8 +30,9 @@ function App() {
       console.log('Not today sir.')
     })
 
-  },[])
-  
+  },[formattedDate])
+
+
 
   return (
     <div className="App">
@@ -29,7 +40,12 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
-      <Header date = {date}/>
+      
+
+
+
+      <Header date = {date} selectDate = {selectDate} setSelectDate={setSelectDate} dateSetter={dateSetter} formattedDate={formattedDate} title = {title}/>
+
       <Description explanation = {explanation}/>
       <Image image = {url}/>
 

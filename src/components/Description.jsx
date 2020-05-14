@@ -17,9 +17,10 @@ margin: 2%;
 padding: 4%;
 
 @media(max-width: 500px) {
-    width: 75%;
-    font-size: .8rem;
+    width: 80%;
+    font-size: .9rem;
     padding: 8%;
+    margin-bottom: 5%;
 };
 
 h1 {
@@ -28,8 +29,9 @@ h1 {
     margin: 0;
 
     @media(max-width: 500px){
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         margin-bottom: 2%;
+        width:100%;
     }
 }
 

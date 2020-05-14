@@ -19,7 +19,7 @@ margin-bottom: 2%;
 flex-direction: column;
 
     @media(max-width: 500px) {
-        width: 75%;
+        width: 80%;
         font-size: .8rem;
         padding: 8%;
     };
@@ -33,7 +33,7 @@ img{
 
     @media(max-width: 500px) {
         width: 100%;
-    height: 100%;
+        height: 100%;
     };
 }
 `

@@ -12,6 +12,12 @@ flex-direction: column;
 background-color: rgb(240, 240, 240);
 border-radius: 5px;
 padding: 2%;
+
+
+@media(max-width: 500px) {
+        width: 80%;
+        margin: 5% 0;
+    };
 `
 const StyledHeaderContainer = styled.div`
 display: flex;

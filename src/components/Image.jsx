@@ -18,12 +18,23 @@ box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
 margin-bottom: 2%;
 flex-direction: column;
 
+    @media(max-width: 500px) {
+        width: 75%;
+        font-size: .8rem;
+        padding: 8%;
+    };
 img{
     display: flex;
     width: 90%;
     height: 90%;
     align-self: center;
     padding: 2%;  
+
+
+    @media(max-width: 500px) {
+        width: 100%;
+    height: 100%;
+    };
 }
 `
 

@@ -16,10 +16,21 @@ box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
 margin: 2%;
 padding: 4%;
 
+@media(max-width: 500px) {
+    width: 75%;
+    font-size: .8rem;
+    padding: 8%;
+};
+
 h1 {
     text-align: center;
     padding: 0;
     margin: 0;
+
+    @media(max-width: 500px){
+        font-size: 1.2rem;
+        margin-bottom: 2%;
+    }
 }
 
 h3 {

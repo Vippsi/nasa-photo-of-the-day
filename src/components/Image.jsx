@@ -5,18 +5,21 @@ import styled from 'styled-components'
 const BigContainer = styled.div `
 display:flex;
 justify-content:center;
+height: 100%;
+width: 50%;
+align-items:center;
 `
 
 const StyledImgContainer = styled.div`
-width: 83%;
-/* height: 60%; */
+/* width: 50%; */
+height: 100%;
 border-radius: 5px;
 display:flex;
 justify-content:center;
 background-color: rgb(240, 240, 240);
 box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
-margin-bottom: 2%;
-flex-direction: column;
+margin-top: 2%;
+/* flex-direction: column; */
 
     @media(max-width: 500px) {
         width: 80%;
